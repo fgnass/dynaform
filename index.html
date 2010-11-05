@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<link rel="stylesheet" href="lib/jquery-ui.css" />
+<link rel="stylesheet" href="theme/default.css" />
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.js"></script>
+<script src="lib/jquery-ui.js"></script>
+<script src="lib/jquery.validate.js"></script>
+<script src="jquery.dynaform.js"></script>
+<style type="text/css">
+.buttons {
+	margin-top: 20px;
+}
+</style>
+</head>
+<body>
+<form>
+	<div id="form"></div>
+	<div class="buttons">
+		<input type="submit" class="submit" />
+	</div>
+</form>
+<script> 
+var data = {
+	project: '',
+	author: 'Felix Gnass',
+	features: ['Extendable', 'Customizable', 'Lightweight'],
+	links: [
+		{title: 'GitHub', url: 'http://github.com/fgnass/jquery-dynaform'},
+		{title: 'Blog', url: 'http://fgnass.posterous.com'},
+		{title: 'Twitter', url: 'http://twitter.com/fgnass'}
+	]
+};
+
+$('#form').dynaform(data, function() {
+	this.text('project', {required: 'true'})
+		.checkbox('openSource')
+		.datepicker('releaseDate', {required: 'true'})
+		.list('features', {dragAndDrop: true}, function() {
+			this.text({required: 'true'});
+		});
+	}
+);
+</script>
+
+</body>
+</html>

@@ -1,0 +1,216 @@
+body {	
+}
+
+/* Adjust font-size of jQuery UI widgets */
+.ui-widget {
+	font-size: 12px;
+}
+
+form {
+	background: #eee;
+	padding: 20px;
+}
+
+/* Reset list styles */
+ul, li {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+/* Labels */
+label.name {
+	font-size: 12px;
+	font-weight: bold;
+	font-family: Helvetica;
+	color: #555;
+	padding: 0 2px 2px 1px;
+	text-shadow: #fff 0 1px 1px;
+	vertical-align: middle;
+}
+
+/* Spacing for labeled blocks */ 
+.labeled {
+	margin-top: 20px;
+}
+
+/* Input fields */
+textarea,
+input.text {
+	border: 1px solid #ddd;
+	width: 500px;
+	padding: 6px;
+	font-size: 14px;
+	color: #555;
+}
+input.datepicker {
+	width: 120px;
+}
+
+/* Error placement */
+
+.element {
+	white-space: nowrap;
+}
+
+input,
+textarea,
+.error-tooltip {
+	vertical-align: middle;
+}
+.error-tooltip {
+	position: relative;
+	display: inline-block;
+	width: 1px;
+	height: 1px;
+}
+.error-tooltip .errors {
+	position: absolute;
+	margin-top: -9px;
+	width: 200px;
+}
+
+.errors {
+	font-family: Arial, sans-serif;
+	font-size: 14px;
+}
+
+.errors b {
+	font-weight: normal;
+}
+.errors b:before {
+	content: "◄";
+	color: #ea5338;
+	vertical-align: middle;
+	text-shadow: 1px 1px 4px rgba(0,0,0,0.2);
+}
+label.error {
+	background: #ea5338;
+	color: #fff;
+	margin-left: -6px;
+	_margin-left: 0;
+	padding: 4px 6px;
+	border-radius: 2px;
+	-moz-border-radius: 2px;
+	-moz-box-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+	-webkit-box-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+	vertical-align: middle;
+}
+
+
+.image-button {
+	border: none;
+	background-color: transparent;
+	background-position: center center;
+	background-repeat: no-repeat;
+	width: 24px;
+	height: 24px;
+	padding: 24px 0 0 0;
+	overflow: hidden;
+}
+
+.list .add {
+	background-image: url(images/add.png);
+	margin: -6px 0 0 5px;
+}
+.list .remove {
+	background-image: url(images/delete.png);
+	vertical-align: middle;
+	margin-left: 5px;
+}
+
+.list .up,
+.list .down {
+	position: absolute;
+	left: 5px;
+}
+
+.list .up {
+	background-image: url(images/up.gif);
+	background-position: 9px 10px;
+	top: 0;
+}
+
+.list .down {
+	background-image: url(images/down.gif);
+	background-position: 9px 12px;
+	bottom: 0;
+}
+.itemElement {
+	margin-left: 24px;
+	display: inline-block;
+	vertical-align: middle;
+}
+.nested {
+	padding: 0 2px 20px 10px;
+}
+.nested .label {
+	margin-top: 10px;
+}
+ul .nested {
+	padding-left: 0;
+}
+ul {
+	margin-top: 5px;
+}
+li {
+	margin: 0 0 10px 0;
+}
+.item {
+	display: inline-block;
+	_display: inline;
+	background: #e4e4e4;
+	border-radius: 3px;
+	padding: 10px;
+	position: relative;
+	zoom:1;
+}
+.draggable {
+	background-image: url(images/grip.gif);
+	background-position: 11px center;
+	background-repeat: no-repeat;
+}
+
+.item {
+	border: 1px solid #ddd;
+}
+.ui-sortable-helper .item {
+	-webkit-box-shadow: 1px 1px 4px rgba(0,0,0,0.2);
+}
+
+input.submit {
+	background: #e4e4e4;
+	border: 1px solid #ccc;
+	border-radius: 3px;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	box-shadow: inset 0 0 1px 1px #f6f6f6;
+	-moz-box-shadow: inset 0 0 1px 1px #f6f6f6;
+	-webkit-box-shadow: inset 0 0 1px 1px #f6f6f6;
+
+	color: #333;
+	font-family: Helvetica, Arial, sans-serif;
+	font-size: 12px;
+	font-weight: bold;
+
+	padding: 8px 20px 9px;
+	text-align: center;
+	text-shadow: 0 1px 0px #fff;
+}
+
+* html input.submit {
+	padding: 4px 0px 5px;
+}
+
+input.submit:hover {
+	background: #eee;
+	box-shadow: inset 0 0 1px 1px #fff;
+	-moz-box-shadow: inset 0 0 1px 1px #fff;
+	-webkit-box-shadow: inset 0 0 1px 1px #fff;
+	color: #444;
+}
+
+input.submit:active {
+	background: #e0e0e0;
+	color: #000;
+}
