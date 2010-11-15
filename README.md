@@ -1,9 +1,9 @@
 jQuery Dynamic Forms
 ====================
 
-Plugin to dynamically create forms. The plugin has been originally designed to run on the server (in Node.js, using [Jayno](http://github.com/fgnass/jayno)), but of course works perfectly well in the browser, too.
+Plugin to dynamically create forms. The plugin has been originally designed to run on the server (in Node.js, using [express-jsdom](http://github.com/fgnass/express-jsdom)), but of course works perfectly well in the browser, too.
 
-![Screenshot](http://cl.ly/2c950ea59460cd6ef65a/content)
+![Screenshot](https://github.com/downloads/fgnass/fgnass.github.com/dynaform.png)
 
 ## Usage
 
