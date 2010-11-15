@@ -56,11 +56,10 @@
 		},
 		
 		register: function (builders) {
-			// Add raw builders to prototype.builders
-			$.extend(DynaForm.prototype.builders, builders);
-			
 			$.each(builders, function (type, builder) {
-				var prev = DynaForm.prototype[type];
+				var prev = DynaForm.prototype.builders[type];
+				DynaForm.prototype.builders[type] = builder;
+				
 				DynaForm.prototype[type] = function () {
 					var args = $.makeArray(arguments),
 						shift = function (type) {
@@ -83,7 +82,9 @@
 							value: bind && this.data ? this.data[bind] : this.data
 						}
 					);
-					var el = builder.call(this, options, prev).addClass(type);
+					
+					var proxy = $.proxy(prev, this);
+					var el = builder.call(this, options, proxy).addClass(type);
 					
 					if (options.label) {
 						el = $('<div class="labeled">')
